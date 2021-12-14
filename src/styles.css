@@ -80,10 +80,15 @@ h6 {
   font-weight: 400;
 }
 
+.container-fluid {
+  max-width: 1140px;
+}
+
 a {
   color: #46474d;
 }
 
 .bi {
   font-size: 20px;
+  cursor: pointer;
 }

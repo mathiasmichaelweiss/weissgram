@@ -2,6 +2,10 @@ header {
   padding-top: 0 !important;
 }
 
+header .logo-search p {
+  cursor: default;
+}
+
 .search-container {
   position: relative;
 }
@@ -20,4 +24,5 @@ header .menu nav ul a:hover {
   position: absolute;
   right: 0;
   padding: 0.5rem;
+  cursor: default;
 }

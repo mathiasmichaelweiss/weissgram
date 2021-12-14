@@ -1,7 +1,7 @@
 .bg-profile_image {
   height: 300px;
   background-repeat: no-repeat;
-  background-size: 101%;
+  background-size: cover;
   background-position: 50%;
   border-radius: 0 0 0.7rem 0.7rem;
   position: relative;
@@ -35,4 +35,51 @@
 .change-bg:hover {
   color: #d80000;
   background-color: #fff;
+}
+
+.user-settings i:hover {
+  color: #732a2a;
+}
+
+.user-name {
+  color: #d80000;
+  font-size: 18px;
+}
+
+.user-at {
+  color: #7e7e82;
+}
+
+.following-followers {
+  position: relative;
+}
+
+.following-followers::before,
+.following-followers::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 200px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #eceded;
+}
+
+.following-followers:before {
+  top: -0.5rem;
+}
+
+.following-followers:after {
+  bottom: -1rem;
+}
+
+.following::after {
+  content: "";
+  position: absolute;
+  right: -0.2rem;
+  width: 1px;
+  height: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #eceded;
 }
