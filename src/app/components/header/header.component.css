@@ -1,3 +1,7 @@
+header {
+  padding-top: 0 !important;
+}
+
 .search-container {
   position: relative;
 }
@@ -5,7 +9,11 @@
 .search,
 .bi-search {
   background-color: #ebebeb;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 0.7rem 0.7rem;
+}
+
+header .menu nav ul a:hover {
+  color: #732a2a;
 }
 
 .bi-search {

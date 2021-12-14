@@ -1,0 +1,38 @@
+.bg-profile_image {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: 101%;
+  background-position: 50%;
+  border-radius: 0 0 0.7rem 0.7rem;
+  position: relative;
+}
+
+.user_photo {
+  border-radius: 100rem;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  bottom: -75px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.change-bg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0.8rem;
+  top: 0.8rem;
+  width: 35px;
+  height: 35px;
+  background-color: #d80000;
+  color: #fff;
+  border-radius: 100rem;
+  cursor: pointer;
+}
+
+.change-bg:hover {
+  color: #d80000;
+  background-color: #fff;
+}
