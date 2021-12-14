@@ -1,7 +1,10 @@
 header {
-  padding-top: 0 !important;
   font-weight: 400;
   font-size: 14px;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background-color: #fff;
 }
 
 header .logo-search p {
