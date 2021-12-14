@@ -1,0 +1,8 @@
+.title {
+  font-weight: 600;
+  color: #732a2a;
+  padding: 0.8rem;
+  border-radius: 0 0 0.8rem 0.8rem;
+  border: 1px solid #eceded;
+  margin-bottom: 0.5rem;
+}

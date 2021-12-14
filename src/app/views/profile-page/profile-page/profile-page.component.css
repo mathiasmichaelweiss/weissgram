@@ -52,6 +52,7 @@
 
 .following-followers {
   position: relative;
+  margin-bottom: 4rem !important;
 }
 
 .following-followers::before,
@@ -82,4 +83,12 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #eceded;
+}
+
+.following-followers > p {
+  color: #46474d;
+}
+
+.following-followers-title {
+  color: #7e7e82;
 }
