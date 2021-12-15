@@ -105,6 +105,7 @@ a {
   border-radius: 0 0 0.8rem 0.8rem;
   border: 1px solid #eceded;
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .input-default,
@@ -120,4 +121,14 @@ a {
 .button {
   background-color: #e55454;
   color: #fff;
+}
+
+.text-block {
+  font-weight: 600;
+  text-align: justify;
+  font-weight: 300;
+}
+
+.text-block p {
+  width: 80%;
 }

@@ -1,0 +1,9 @@
+.user-header-photo {
+  width: 3rem;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.user-name {
+  color: #732a2a;
+  font-weight: normal;
+}

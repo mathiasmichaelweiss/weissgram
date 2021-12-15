@@ -1,0 +1,10 @@
+img {
+  width: 104%;
+  position: relative;
+  left: -1.9%;
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+
+.post {
+  padding-bottom: 0 !important;
+}
