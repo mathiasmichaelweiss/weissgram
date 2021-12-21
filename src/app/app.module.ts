@@ -12,6 +12,9 @@ import { UiInputComponent } from './components/ui-input/ui-input.component';
 import { UiButtonComponent } from './components/ui-button/ui-button.component';
 import { PostComponent } from './components/post/post.component';
 import { UiUserHeaderComponent } from './components/ui-user-header/ui-user-header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UiPhotosSliderComponent } from './components/ui-photos-slider/ui-photos-slider.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,16 @@ import { UiUserHeaderComponent } from './components/ui-user-header/ui-user-heade
     UiInputComponent,
     UiButtonComponent,
     PostComponent,
-    UiUserHeaderComponent
+    UiUserHeaderComponent,
+    UiPhotosSliderComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

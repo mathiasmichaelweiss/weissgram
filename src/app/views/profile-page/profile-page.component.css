@@ -10,6 +10,7 @@
 .user_photo {
   border-radius: 100rem;
   position: absolute;
+  z-index: 1090;
   width: 150px;
   height: 150px;
   bottom: -75px;
@@ -43,7 +44,22 @@
 
 .user-name {
   color: #d80000;
+}
+
+.user-name,
+input {
   font-size: 18px;
+  font-weight: 500;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.changeName input {
+  color: #7e7e82;
+  border: 1px solid #eceded;
+  padding-bottom: 1px;
+  transition: border 0.2s;
 }
 
 .user-at {

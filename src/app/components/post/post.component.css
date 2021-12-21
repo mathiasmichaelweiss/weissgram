@@ -1,9 +1,55 @@
+.photos {
+  position: relative;
+  display: flex;
+  width: 100%;
+  left: -1.9%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
 img {
-  width: 104%;
+  /* width: 104%; */
   position: relative;
   border-radius: 0 0 0.8rem 0.8rem;
 }
 
+img.onePhoto {
+}
+
+img.twoPhotos,
+img.threePhotos {
+  border-radius: 0;
+}
+
+img.twoPhotos {
+  width: 55%;
+}
+
+img.threePhotos {
+  width: 36%;
+}
+
 .post {
   padding-bottom: 0 !important;
+}
+
+.like {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.5;
+  bottom: 0;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d80000;
+}
+
+.likes {
+  margin-left: 0.5rem;
+}
+
+.like:hover {
+  opacity: 1;
 }

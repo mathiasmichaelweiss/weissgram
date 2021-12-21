@@ -1,0 +1,28 @@
+<div class="slider-container d-flex flex-wrap align-content-start">
+  <div class="close" (click)="closeSlider()">
+    <i class="bi bi-x"></i>
+    <div class="close-bg"></div>
+  </div>
+  <div class="slider-header">
+    <!-- <div class="slider-tab active"></div> -->
+
+    <ng-container *ngFor="let tab of photos; index as idx">
+      <div
+        (click)="slider(idx)"
+        [ngClass]="{ active: idx == sliderPosition, 'slider-tab': true }"
+      ></div>
+    </ng-container>
+  </div>
+
+  <div class="slides-container d-flex">
+    <div class="slides-wrapper">
+      <div
+        *ngFor="let photo of photos; index as i"
+        class="slide"
+        [ngStyle]="{
+          'background-image': 'url(' + photos[sliderPosition] + ')'
+        }"
+      ></div>
+    </div>
+  </div>
+</div>

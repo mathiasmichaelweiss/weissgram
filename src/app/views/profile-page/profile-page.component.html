@@ -1,13 +1,13 @@
 <div
   class="bg-profile_image p-3 w-100"
-  style="background-image: url(https://images.hdqwalls.com/download/mac-osx-sierra-lu-1366x768.jpg);"
+  [ngStyle]="{ 'background-image': 'url(' + userData.background + ')' }"
 >
   <div class="change-bg">
     <i class="bi bi-pen"></i>
   </div>
   <div
     class="user_photo"
-    style="background-image: url(../assets/images/user-photo.png);"
+    [ngStyle]="{ 'background-image': 'url(' + userData.photo + ')' }"
   ></div>
 </div>
 
@@ -16,33 +16,54 @@
     <i class="bi bi-gear"></i>
   </div>
   <div class="change-page-info col-6 d-flex justify-content-end p-0">
-    <i class="bi bi-pen"></i>
+    <i class="bi bi-pen" (click)="isUserNameChanging = !isUserNameChanging"></i>
   </div>
 </div>
 
-<div class="user-name col-12 d-flex justify-content-center mb-1">
-  Mathias Michael Weiß
+<div
+  *ngIf="!isUserNameChanging"
+  class="user-name col-12 d-flex justify-content-center"
+>
+  {{ userData.name }}
 </div>
-<div class="user-at col-12 d-flex justify-content-center">@MathiasWeiß</div>
+<form
+  *ngIf="isUserNameChanging"
+  action="submit"
+  #userNameForm="ngForm"
+  class="changeName col-12 d-flex justify-content-center"
+  (ngSubmit)="changeUserName(userNameForm)"
+>
+  <input
+    type="text"
+    class="text-center"
+    [value]="userData.name"
+    [placeholder]="userData.name"
+    id="user_name"
+    name="user_name"
+    ngModel
+  />
+</form>
+<div class="user-at col-12 d-flex justify-content-center mt-1">
+  {{ userData.nickName }}
+</div>
 
 <div class="following-followers col-12 p-0 d-flex mt-4 pt-2 mb-4">
   <div class="following col-6 p-0 d-flex justify-content-end pr-4 flex-wrap">
     <p class="following-count col-12 p-0 d-flex justify-content-end pr-3 mb-1">
-      1000
+      {{ userData.following }}
     </p>
     <p class="following-followers-title mb-0">Following</p>
   </div>
 
   <div class="followers col-6 p-0 d-flex justify-content-start pl-4 flex-wrap">
-    <p class="followers-count col-12 p-0 pl-3 mb-1">1000</p>
-    <p class="following-followers-title mb-0">Following</p>
+    <p class="followers-count col-12 p-0 pl-3 mb-1">{{ userData.followers }}</p>
+    <p class="following-followers-title mb-0">Followers</p>
   </div>
 </div>
 
 <app-title></app-title>
-<app-text-block></app-text-block>
+<app-text-block [isCanChange]="true"></app-text-block>
 <app-add-post></app-add-post>
 <div class="posts col-12 p-0">
-  <app-post></app-post>
-  <app-post></app-post>
+  <app-post *ngFor="let post of userData.post" [newPost]="post"></app-post>
 </div>

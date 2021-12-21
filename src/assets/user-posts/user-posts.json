@@ -1,0 +1,40 @@
+[
+  {
+    "user": "Mathias Michael Weiß",
+    "photo": "../assets/images/user-photo.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi doloremque rem consectetur sint repellendus culpa laudantium obcaecati saepe tempora placeat, quisquam reiciendis illo aperiam sunt ipsa ex ducimus vero harum modi adipisci? Consectetur molestiae quis illum architecto obcaecati possimus?",
+    "postPhotos": [
+      "https://images.hdqwalls.com/download/mac-osx-sierra-lu-1366x768.jpg"
+    ]
+  },
+  {
+    "user": "Mathias Michael Weiß",
+    "photo": "../assets/images/user-photo.png",
+    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi doloremque rem consectetur sint repellendus culpa laudantium obcaecati saepe tempora placeat, quisquam reiciendis.",
+    "postPhotos": [
+      "https://yablyk.com/wp-content/uploads/2014/08/os-x_yosemite-wallpaper.jpg",
+      "https://www.desktopbackground.org/p/2013/01/03/509161_mac-os-x-tiger_2560x1600_h.jpg"
+    ]
+  },
+  {
+    "user": "Mathias Michael Weiß",
+    "photo": "../assets/images/user-photo.png",
+    "text": "Consectetur molestiae quis illum architecto obcaecati possimus?",
+    "postPhotos": [
+      "https://images.hdqwalls.com/download/mac-osx-sierra-lu-1366x768.jpg",
+      "https://yablyk.com/wp-content/uploads/2014/08/os-x_yosemite-wallpaper.jpg",
+      "https://www.desktopbackground.org/p/2013/01/03/509161_mac-os-x-tiger_2560x1600_h.jpg"
+    ]
+  },
+  {
+    "user": "Mathias Michael Weiß",
+    "photo": "../assets/images/user-photo.png",
+    "text": "Consectetur molestiae quis illum architecto obcaecati possimus?",
+    "postPhotos": [
+      "https://yablyk.com/wp-content/uploads/2014/08/os-x_yosemite-wallpaper.jpg",
+      "https://www.desktopbackground.org/p/2013/01/03/509161_mac-os-x-tiger_2560x1600_h.jpg",
+      "https://images.hdqwalls.com/download/mac-osx-sierra-lu-1366x768.jpg",
+      "https://www.desktopbackground.org/p/2013/01/03/509161_mac-os-x-tiger_2560x1600_h.jpg"
+    ]
+  }
+]

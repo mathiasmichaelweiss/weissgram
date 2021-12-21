@@ -1,0 +1,114 @@
+@keyframes slide {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.slider-container {
+  position: fixed;
+  background-color: #fff;
+  width: 90vw;
+  max-width: 920px;
+  height: 460px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1099;
+  border-radius: 0 0 0.7rem 0.7rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.02);
+  margin-top: 2rem;
+}
+
+.slider-container .slider-header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 1098;
+}
+
+.slider-container .slider-header .slider-tab {
+  width: 100%;
+  border-bottom: 15px solid #ebebeb86;
+  cursor: pointer;
+}
+
+.slider-container .slider-header .slider-tab.active,
+.slider-container .slider-header .slider-tab.active:hover {
+  border-bottom: 15px solid #d80000;
+}
+
+.slider-container .slider-header .slider-tab:hover {
+  border-bottom: 15px solid #d8000033;
+}
+
+.slider-container .slides-container {
+  height: 100%;
+  width: 100%;
+}
+
+.slider-container .close {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  background-color: #fff;
+  color: #212529;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1099;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider-container .close .bi {
+  position: relative;
+  z-index: 1080;
+}
+
+.close-bg {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  background-color: #d80000;
+  border-radius: 100rem;
+  transition: height 0.1s, width 0.1s;
+}
+
+.slider-container .close:hover > .close-bg {
+  width: 105%;
+  height: 105%;
+}
+
+.slider-container .close:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.slides-container {
+  position: absolute;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+.slides-container .slides-wrapper {
+  width: 90vw;
+  max-width: 920px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slides-container .slide {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-position: 50%;
+  background-size: cover;
+  animation-name: slide;
+  animation-duration: 0.3s;
+}

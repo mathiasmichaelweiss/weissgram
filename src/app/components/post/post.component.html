@@ -1,16 +1,33 @@
 <div class="post border-container col-12 p-3">
   <app-ui-user-header></app-ui-user-header>
   <div class="text-block mt-2">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam excepturi
-    doloremque rem consectetur sint repellendus culpa laudantium obcaecati saepe
-    tempora placeat, quisquam reiciendis illo aperiam sunt ipsa ex ducimus vero
-    harum modi adipisci? Consectetur molestiae quis illum architecto obcaecati
-    possimus?
+    {{ newPost.text }}
   </div>
-  <img
-    src="https://images.hdqwalls.com/download/mac-osx-sierra-lu-1366x768.jpg"
-    alt=""
-    class="mt-2"
-    style="left: -1.9%;"
-  />
+  <div class="photos" (click)="showAllPhotos = !showAllPhotos">
+    <ng-container *ngFor="let photo of photosToShow">
+      <img
+        [src]="photo"
+        alt=""
+        [ngClass]="{
+          threePhotos: photosToShow.length >= 3,
+          twoPhotos: photosToShow.length === 2,
+          onePhoto: photosToShow.length === 1
+        }"
+        class="mt-2"
+      />
+    </ng-container>
+  </div>
+
+  <div class="like mb-3 p-2" (click)="like()">
+    <i *ngIf="!liked" class="bi bi-heart"></i>
+    <i *ngIf="liked" class="bi bi-heart-fill"></i>
+    <!-- <i class="bi bi-heart-fill"></i> -->
+    <div *ngIf="post.likes > 0" class="likes">
+      {{ post.likes }}
+    </div>
+  </div>
 </div>
+<app-ui-photos-slider
+  *ngIf="showAllPhotos"
+  [photos]="newPost.postPhotos"
+></app-ui-photos-slider>
