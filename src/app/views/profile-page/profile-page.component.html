@@ -49,14 +49,18 @@
 
 <div class="following-followers col-12 p-0 d-flex mt-4 pt-2 mb-4">
   <div class="following col-6 p-0 d-flex justify-content-end pr-4 flex-wrap">
-    <p class="following-count col-12 p-0 d-flex justify-content-end pr-3 mb-1">
+    <span
+      class="following-count col-12 p-0 d-flex justify-content-end p-0 mb-1 d-flex"
+    >
       {{ userData.following }}
-    </p>
+    </span>
     <p class="following-followers-title mb-0">Following</p>
   </div>
 
   <div class="followers col-6 p-0 d-flex justify-content-start pl-4 flex-wrap">
-    <p class="followers-count col-12 p-0 pl-3 mb-1">{{ userData.followers }}</p>
+    <span class="followers-count col-12 p-0 pl-0 mb-1 d-flex">{{
+      userData.followers
+    }}</span>
     <p class="following-followers-title mb-0">Followers</p>
   </div>
 </div>

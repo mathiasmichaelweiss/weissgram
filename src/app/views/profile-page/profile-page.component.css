@@ -107,4 +107,9 @@ input {
 
 .following-followers-title {
   color: #7e7e82;
+  cursor: pointer;
+}
+
+.following-followers-title:hover {
+  color: #d80000;
 }

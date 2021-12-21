@@ -54,11 +54,6 @@ body {
   position: relative;
 }
 
-body {
-  height: 100%;
-  overflow: hidden;
-}
-
 input,
 button,
 textarea {
