@@ -16,6 +16,12 @@ export class UiPhotosSliderComponent implements OnInit, OnDestroy, DoCheck {
 
   ngOnInit(): void {
     this.sliderLength = this.photos.length;
+
+    if (!this.isSliderClosed) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'scroll';
+    }
   }
 
   ngOnDestroy(): void {}
@@ -29,5 +35,7 @@ export class UiPhotosSliderComponent implements OnInit, OnDestroy, DoCheck {
   public closeSlider(): void {
     this.dataFlowService.provideIsSliderClosed(this.isSliderClosed);
     this.isSliderClosed = false;
+    document.body.style.overflow = 'scroll';
+    document.querySelector('.no-clickable-background')?.remove();
   }
 }

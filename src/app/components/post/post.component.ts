@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnDestroy,
+  OnChanges,
+  DoCheck
+} from '@angular/core';
 import * as type from '../../models/types/types';
 import { DataFlowService } from '../ui-photos-slider/services/data-flow.service';
 
@@ -7,7 +14,7 @@ import { DataFlowService } from '../ui-photos-slider/services/data-flow.service'
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit, OnDestroy {
+export class PostComponent implements OnInit, OnDestroy, DoCheck {
   @Input() newPost!: any;
 
   public post: { likes: number } = {
@@ -40,6 +47,8 @@ export class PostComponent implements OnInit, OnDestroy {
     }
   }
 
+  ngDoCheck(): void {}
+
   ngOnDestroy(): void {
     this.isSliderSubscribtion.unsubsctibe();
   }
@@ -52,5 +61,18 @@ export class PostComponent implements OnInit, OnDestroy {
       this.post.likes = this.post.likes - 1;
       this.liked = false;
     }
+  }
+
+  public showSlider(): void {
+    this.showAllPhotos = !this.showAllPhotos;
+    this._createNoClockableBackground();
+  }
+
+  private _createNoClockableBackground(): void {
+    const noClickableBg = document.createElement('div');
+    noClickableBg.classList.add('no-clickable-background');
+
+    document.body.append(noClickableBg);
+    console.log(document.querySelector('.no-clickable-background'));
   }
 }

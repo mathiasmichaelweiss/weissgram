@@ -3,7 +3,7 @@
   <div class="text-block mt-2">
     {{ newPost.text }}
   </div>
-  <div class="photos" (click)="showAllPhotos = !showAllPhotos">
+  <div class="photos" (click)="showSlider()">
     <ng-container *ngFor="let photo of photosToShow">
       <img
         [src]="photo"
