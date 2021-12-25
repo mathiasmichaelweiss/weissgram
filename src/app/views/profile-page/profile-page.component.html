@@ -30,8 +30,8 @@
   *ngIf="isUserNameChanging"
   action="submit"
   #userNameForm="ngForm"
-  class="changeName col-12 d-flex justify-content-center"
-  (ngSubmit)="changeUserName(userNameForm)"
+  class="changeText col-12 d-flex justify-content-center"
+  (ngSubmit)="changeTextValue('USER_NAME', userNameForm.value.user_name)"
 >
   <input
     type="text"
@@ -66,7 +66,11 @@
 </div>
 
 <app-title></app-title>
-<app-text-block [isCanChange]="true"></app-text-block>
+<app-text-block
+  [isCanChange]="true"
+  [changeTextValue]="changeTextValue"
+  [infoText]="userData.about"
+></app-text-block>
 <app-add-post></app-add-post>
 <div class="posts col-12 p-0">
   <app-post *ngFor="let post of userData.post" [newPost]="post"></app-post>

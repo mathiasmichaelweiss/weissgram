@@ -55,7 +55,7 @@ input {
   align-items: center;
 }
 
-.changeName input {
+.changeText input {
   color: #7e7e82;
   border: 1px solid #eceded;
   padding-bottom: 1px;

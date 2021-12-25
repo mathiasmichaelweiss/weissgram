@@ -1,18 +1,30 @@
 <div class="border-container text-block col-12 p-3 d-flex">
-  <p class="col-11 p-0">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quisquam
-    quibusdam reprehenderit voluptatibus adipisci odio odit omnis aliquid beatae
-    perferendis ullam laudantium dignissimos, vitae quidem. Iste nemo sed
-    tenetur obcaecati et animi dolore quas, velit perspiciatis eveniet
-    reiciendis quis atque facilis. Aperiam vitae sint minima praesentium!
-    Aspernatur mollitia laudantium a eaque incidunt sapiente blanditiis quidem
-    aut, minima, perferendis facilis quia molestias necessitatibus unde sint
-    repellendus cumque earum neque iusto nesciunt nisi, quae aliquam omnis
-    laboriosam! Enim, perspiciatis exercitationem dolorum quisquam repellat
-    veritatis quo fugiat quae ex dignissimos et omnis amet libero nam tempora
-    eaque nisi facilis, eveniet iure molestiae! Aut?
-  </p>
-  <div *ngIf="isCanChange" class="change col-1 p-0 d-flex justify-content-end">
+  <div class="col-11 p-0 txt" *ngIf="!isChanging">
+    {{ infoText }}
+  </div>
+  <ng-container *ngIf="isChanging">
+    <form
+      action="submit"
+      #userInfoForm="ngForm"
+      class="col-11 p-0"
+      [ngStyle]="{ height: textHeight }"
+    >
+      <textarea
+        type="text"
+        [placeholder]="infoText"
+        class="p-0"
+        name="user_info"
+        ngModel
+        (keyup.enter)="changeInfo(userInfoForm.value.user_info)"
+      ></textarea>
+    </form>
+  </ng-container>
+
+  <div
+    *ngIf="isCanChange"
+    class="change col-1 p-0 d-flex justify-content-end"
+    (click)="isChanging = !isChanging"
+  >
     <i class="bi bi-pen"></i>
   </div>
 </div>

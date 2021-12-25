@@ -7,6 +7,7 @@ export type User = {
   background: string;
   id: string;
   post: { user: string; photo: string; text: string; postPhotos: string[] }[];
+  about: string;
 };
 
 export type Post = {
