@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfilePageComponent } from './views/profile-page/profile-page.component';
@@ -15,6 +14,10 @@ import { UiUserHeaderComponent } from './components/ui-user-header/ui-user-heade
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UiPhotosSliderComponent } from './components/ui-photos-slider/ui-photos-slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthComponent } from './views/auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthModalComponent } from './views/auth/components/auth-modal/auth-modal.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UiButtonComponent,
     PostComponent,
     UiUserHeaderComponent,
-    UiPhotosSliderComponent
+    UiPhotosSliderComponent,
+    AuthComponent,
+    AuthModalComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

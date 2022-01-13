@@ -1,0 +1,25 @@
+.alert {
+  position: absolute;
+  z-index: 2000;
+
+  padding: 0.9375rem;
+
+  min-width: 25rem;
+
+  background-color: #fff;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.14);
+  border-radius: 0.8rem;
+
+  color: #f88138;
+}
+
+.alert p {
+  font-weight: normal;
+  color: #46474d;
+}

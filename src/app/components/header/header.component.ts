@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  public visible = true;
+  constructor() {}
 
   ngOnInit(): void {
-  }
+    const currentHref = window.location.href;
+    const endpoint = currentHref.slice(-4);
+    const alternativeEndpoint = currentHref.slice(-1);
 
+    if (endpoint === 'auth' || alternativeEndpoint === '/')
+      this.visible = false;
+  }
 }

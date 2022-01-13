@@ -1,0 +1,16 @@
+<div
+  #alert
+  class="alert d-flex flex-wrap flex-column align-items-center justify-content-start m-0 row"
+  [ngStyle]="{ color: color }"
+>
+  <div class="alert-title d-flex w-100 col-12 p-0">
+    <i [class]="icon"></i>
+    <h3 class="col-10 p-0 m-0">{{ content.title }}</h3>
+    <div class="close col-1 p-0 d-flex justify-content-end">
+      <i class="bi bi-x" (click)="close()"></i>
+    </div>
+  </div>
+  <p class="alert-message col-11 p-0 align-self-end">
+    {{ content.text }}
+  </p>
+</div>
